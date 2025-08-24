@@ -38,6 +38,12 @@ let s:art = [
       \ "length": 1,
       \ "art": "curvy_divider.txt",
   \ },
+  \ {
+      \ "name": "ascii_paste",
+      \ "shortDesc": "Name of this plugin.",
+      \ "length": 6,
+      \ "art": "ascii_paste.txt",
+  \ },
 \ ]
 
 let s:artDict = {}
