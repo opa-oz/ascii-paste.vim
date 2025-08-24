@@ -62,3 +62,9 @@ Shows all available ASCII art
 :Ascii list
 
 ```
+
+
+---
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S1UZ9P7)
+
