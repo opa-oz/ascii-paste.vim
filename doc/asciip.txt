@@ -1,0 +1,25 @@
+*asciip.txt*               ASCII Paste - make your code 100% ASCII
+
+ASCII Paste                                                  *ascii-paste*
+
+GETTING STARTED ~
+
+Suggestions are displayed inline and can be accepted by pressing |<Tab>|.
+
+COMMANDS ~
+
+                                                        *:Ascii*
+:Ascii                  Main command namespace for ASCII Paste.
+
+                                                        *:Ascii_list*
+:Ascii list             Show list of available ASCII art.
+
+                                                        *:Ascii_ls*
+:Ascii ls               Alias for |:Ascii_list|.
+
+                                                        *:Ascii_paste*
+:Ascii paste            Paste selected ASCII art at the cursor position
+                        in the current open buffer.
+
+vim:tw=78:et:ft=help:norl:
+

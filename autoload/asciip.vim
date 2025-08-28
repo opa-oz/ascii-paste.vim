@@ -33,6 +33,10 @@ function! s:commands.paste(opts) abort
   call timer_start(0, {-> cursor(l:current+length, offset) })
 endfunction
 
+function! s:commands.help(opts) abort
+  return a:opts.mods . ' help ' . (len(a:opts.arg) ? ':Ascii_' . a:opts.arg : 'ascii-paste')
+endfunction
+
 
 function! asciip#CommandComplete(arg, lead, pos) abort
   let before_cursor = strpart(a:lead, 0, a:pos)
@@ -56,7 +60,7 @@ function! asciip#CommandComplete(arg, lead, pos) abort
 endfunction
 
 
-function! asciip#Default(arg) abort
+function! asciip#Default(mods, arg) abort
   let cmd = matchstr(a:arg, '^\%(\\.\|\S\)\+')
   let arg = matchstr(a:arg, '\s\zs\S.*')
 
@@ -68,7 +72,7 @@ function! asciip#Default(arg) abort
     " TODO: Do help here   
   endif
 
-  let opts = {'arg':arg}
+  let opts = {'arg':arg, 'mods':a:mods}
 
   call s:commands[tr(cmd, '-', '_')](opts)
 endfunction
